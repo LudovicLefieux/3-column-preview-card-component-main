@@ -1,0 +1,119 @@
+/****** BASE ******/
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--neutral-very-light-gray);
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/****** PREVIEW CARD ******/
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--neutral-transparent-white);
+  margin-bottom: 25px;
+  max-width: 920px;
+}
+
+.preview-card__element {
+  padding: 50px;
+}
+
+.preview-card__element--orange {
+  background: var(--primary-bright-orange);
+}
+
+.preview-card__element--dark-cyan {
+  background: var(--primary-dark-cyan);
+}
+
+.preview-card__element--very-dark-cyan {
+  background: var(--primary-very-dark-cyan);
+}
+
+.preview-card__icon {
+  margin-bottom: 40px;
+}
+
+.preview-card__heading {
+  display: block;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--neutral-very-light-gray);
+  margin-bottom: 40px;
+}
+
+.preview-card__text {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.preview-card__button {
+  display: inline-block;
+  box-sizing: border-box;
+  background: var(--neutral-very-light-gray);
+  padding: 17px 27px;
+  border-radius: 50px;
+  border: solid 3px var(--neutral-very-light-gray);
+  transition: all 0.2s ease;
+}
+
+.preview-card__button:hover {
+  background: none;
+  color: var(--neutral-very-light-gray) !important;
+}
+
+.preview-card__element--orange .preview-card__button {
+  color: var(--primary-bright-orange);
+}
+
+.preview-card__element--dark-cyan .preview-card__button {
+  color: var(--primary-dark-cyan);
+}
+
+.preview-card__element--very-dark-cyan .preview-card__button {
+  color: var(--primary-very-dark-cyan);
+}
+
+/****** RESPONSIVE ******/
+
+@media screen and (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+
+  .preview-card {
+    flex-direction: row;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 25px;
+  }
+}
