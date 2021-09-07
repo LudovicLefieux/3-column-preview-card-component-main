@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-bottom: 25px;
+}
+
 /****** PREVIEW CARD ******/
 
 .preview-card {
@@ -36,7 +40,6 @@ a {
   border-radius: 10px;
   overflow: hidden;
   color: var(--neutral-transparent-white);
-  margin-bottom: 25px;
   max-width: 920px;
 }
 
